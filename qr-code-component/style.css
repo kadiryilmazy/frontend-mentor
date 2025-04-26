@@ -1,0 +1,62 @@
+/* Tüm HTML elementlerini sıfırlıyoruz */
+* {
+    margin: 0; /* margin = dış boşluk (sıfırlıyoruz) */
+    padding: 0; /* padding = iç boşluk (sıfırlıyoruz) */
+    box-sizing: border-box; /* border ve padding dahil ölç */
+}
+
+html,
+body {
+    height: 100%; /* html ve body'yi tam ekran yapar */
+    background-color: #d9e1ee;
+}
+
+body {
+    line-height: 1.5; /* Satır yüksekliğini standart yapar */
+    -webkit-font-smoothing: antialiased; /* Yazı fontlarını yumuşatır (daha net gözükür) */
+    display: flex;
+    justify-content: center; /* YATAY ortala */
+    align-items: center; /* DİKEY ortala */
+    height: 100vh; /* Sayfa yüksekliği kadar alan aç */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block; /* Bu elemanlar block gibi davranır */
+    max-width: 100%; /* Taşmasını engeller */
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit; /* Yazı tipini body'den alır */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.main img {
+    height: 25;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.main p {
+    padding: 20px;
+    color: #c0c0c0;
+    font-weight: 400;
+}
