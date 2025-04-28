@@ -1,0 +1,127 @@
+/* Tüm HTML elementlerini sıfırlıyoruz */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+    margin: 0; /* margin = dış boşluk (sıfırlıyoruz) */
+    padding: 0; /* padding = iç boşluk (sıfırlıyoruz) */
+    box-sizing: border-box; /* border ve padding dahil ölç */
+}
+
+html,
+body {
+    height: 100%; /* html ve body'yi tam ekran yapar */
+    background-color: #f6d050;
+}
+
+body {
+    line-height: 1.5; /* Satır yüksekliğini standart yapar */
+    -webkit-font-smoothing: antialiased; /* Yazı fontlarını yumuşatır (daha net gözükür) */
+    display: flex;
+    justify-content: center; /* YATAY ortala */
+    align-items: center; /* DİKEY ortala */
+    height: 100vh; /* Sayfa yüksekliği kadar alan aç */
+    font-family: "Figtree", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block; /* Bu elemanlar block gibi davranır */
+    max-width: 100%; /* Taşmasını engeller */
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit; /* Yazı tipini body'den alır */
+}
+
+.main {
+    display: flex;
+    height: 55%;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 5px 5px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.main img {
+    width: 95%;
+    border-radius: 10px;
+    margin: 10px !important;
+}
+
+.main p {
+    color: hsl(0, 0%, 42%);
+    font-weight: 400;
+    font-size: 16px;
+}
+.left-content {
+    margin-left: 10px;
+}
+#learning-title {
+    color: black;
+    background-color: #f6d050;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 800;
+}
+.published-text {
+    padding-top: 10px;
+}
+.person-area {
+    display: flex; /* Elemanları yatayda hizalamak için Flexbox kullanılıyor */
+    align-items: center; /* Resim ve yazıyı dikeyde ortalamak için */
+    justify-content: flex-start !important; /* Sola hizalamak için */
+}
+
+.avatar-png {
+    height: 50px; /* Resmin yüksekliğini ayarlıyoruz */
+    width: 50px !important;
+}
+
+.name-text {
+    font-size: 16px; /* Yazının boyutunu ayarlayabilirsin */
+    font-weight: bold; /* Yazının kalın olmasını sağlamak için */
+}
+
+@media only screen and (max-width: 384px) {
+    .main {
+        height: 55%;
+        width: 35%;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .main {
+        height: 55%;
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+        height: 75%;
+        width: 75%;
+    }
+}
+
+/* Tablet ve Mobil İçin Responsive Ayarları */
+@media screen and (max-width: 768px) {
+    .main {
+        height: 55%;
+        width: 55%;
+    }
+}
+
+/* Mobil İçin Özelleştirmeler */
+@media screen and (max-width: 480px) {
+    .main {
+        height: 55%;
+        width: 55%;
+    }
+}
