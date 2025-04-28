@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    margin: 0; /* margin = dış boşluk (sıfırlıyoruz) */
+    padding: 0; /* padding = iç boşluk (sıfırlıyoruz) */
+    box-sizing: border-box; /* border ve padding dahil ölç */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+    background-color: hsl(0, 0%, 8%);
+}
+
+.main {
+    display: flex;
+    overflow: hidden;
+    justify-content: center; /* YATAY ortala */
+    align-items: center; /* DİKEY ortala */
+    flex-direction: column;
+    background-color: hsl(0, 0%, 20%);
+    border: 1px solid black;
+    box-shadow: 5px 5px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.avatar-png {
+    height: 150px; /* Resmin yüksekliğini ayarlıyoruz */
+    width: 150px !important;
+    border-radius: 100%;
+}
+.name-text {
+    font-weight: bold;
+    color: white;
+}
+
+.district-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: hsl(75, 94%, 57%);
+    padding-top: 5px;
+}
+
+.job-text {
+    color: white;
+    padding-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.buttons-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 50px;
+    padding-top: 10px;
+}
+.social-button {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    border: 2px solid #282828;
+    border-radius: 5px;
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), /* Outer shadow */ inset 0 1px 3px rgba(255, 255, 255, 0.3); /* Inner shadow */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.social-button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    z-index: 1;
+}
+
+.social-button:hover::before {
+    top: 0;
+    bottom: 0;
+}
+
+.social-button:hover {
+    background-color: gray; /* Highlight color on hover */
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+
+@media only screen and (min-width: 1536px) {
+    .main {
+        width: 18%;
+    }
+}
+
+@media only screen and (max-width: 1536px) and (min-width: 1280px) {
+    .main {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 1280px) and (min-width: 1024px) {
+    .main {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .main {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 640px) {
+    .main {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .main {
+        width: 80%;
+    }
+}
