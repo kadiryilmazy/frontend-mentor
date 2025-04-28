@@ -40,7 +40,8 @@ select {
 
 .main {
     display: flex;
-    height: 55%;
+    width: 55%;
+    height: 40%;
     overflow: hidden;
     flex-direction: column;
     background-color: white;
@@ -51,7 +52,7 @@ select {
 }
 
 .main img {
-    width: 95%;
+    width: 90%;
     border-radius: 10px;
     margin: 10px !important;
 }
@@ -90,23 +91,24 @@ select {
     font-weight: bold; /* Yazının kalın olmasını sağlamak için */
 }
 
-@media only screen and (max-width: 384px) {
+@media screen and (max-width: 1536px) {
     .main {
-        height: 55%;
+        height: 45%;
         width: 35%;
     }
 }
-@media only screen and (max-width: 1440px) {
+
+@media only screen and (max-width: 1280px) {
     .main {
-        height: 55%;
-        width: 35%;
+        height: 35%;
+        width: 30%;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .main {
-        height: 75%;
-        width: 75%;
+        height: 45%;
+        width: 30%;
     }
 }
 
@@ -114,14 +116,14 @@ select {
 @media screen and (max-width: 768px) {
     .main {
         height: 55%;
-        width: 55%;
+        width: 40%;
     }
 }
 
 /* Mobil İçin Özelleştirmeler */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
     .main {
-        height: 55%;
-        width: 55%;
+        height: 75%;
+        width: 45%;
     }
 }
