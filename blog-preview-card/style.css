@@ -6,42 +6,17 @@
     box-sizing: border-box; /* border ve padding dahil ölç */
 }
 
-html,
 body {
-    height: 100%; /* html ve body'yi tam ekran yapar */
-    background-color: #f6d050;
-}
-
-body {
-    line-height: 1.5; /* Satır yüksekliğini standart yapar */
-    -webkit-font-smoothing: antialiased; /* Yazı fontlarını yumuşatır (daha net gözükür) */
     display: flex;
     justify-content: center; /* YATAY ortala */
     align-items: center; /* DİKEY ortala */
     height: 100vh; /* Sayfa yüksekliği kadar alan aç */
     font-family: "Figtree", sans-serif;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block; /* Bu elemanlar block gibi davranır */
-    max-width: 100%; /* Taşmasını engeller */
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit; /* Yazı tipini body'den alır */
+    background-color: #f6d050;
 }
 
 .main {
     display: flex;
-    width: 55%;
-    height: 40%;
     overflow: hidden;
     flex-direction: column;
     background-color: white;
@@ -52,7 +27,6 @@ select {
 }
 
 .main img {
-    width: 90%;
     border-radius: 10px;
     margin: 10px !important;
 }
@@ -93,48 +67,35 @@ select {
 
 @media only screen and (min-width: 1536px) {
     .main {
-        height: 70%;
         width: 15%;
     }
 }
 
 @media only screen and (max-width: 1536px) and (min-width: 1280px) {
     .main {
-        height: 70%;
-        width: 15%;
+        width: 20%;
     }
 }
 @media only screen and (max-width: 1280px) and (min-width: 1024px) {
     .main {
-        height: 70%;
         width: 25%;
     }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
     .main {
-        height: 70%;
-        width: 35%;
+        width: 30%;
     }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 640px) {
     .main {
-        height: 70%;
-        width: 45%;
+        width: 35%;
     }
 }
 
-@media only screen and (max-width: 640px) and (min-width: 375px) {
+@media only screen and (max-width: 640px) {
     .main {
-        height: 70%;
-        width: 65%;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .main {
-        height: 70%;
-        width: 75%;
+        width: 50%;
     }
 }
